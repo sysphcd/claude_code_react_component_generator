@@ -62,6 +62,10 @@ The UI uses a violet/indigo accent theme defined via CSS custom properties in `s
 
 The chat empty state (`ChatInterface.tsx`) is rendered outside the `ScrollArea` and vertically centered in the panel, since Radix's `ScrollArea` viewport sizes to content and can't center a child against the panel's full height.
 
+## Testing Notes
+
+`src/lib/auth.ts` is tested in `src/lib/__tests__/auth.test.ts`, covering session creation, retrieval, deletion, and verification (including tampered, wrong-secret, and expired tokens). Since it imports `server-only` (a package with no real file on disk, meant only for Next.js's build-time bundler check) and `next/headers`'s `cookies()` (which requires an active request scope), the test mocks both. `server-only` is aliased to a no-op stub via `resolve.alias` in `vitest.config.mts` so the import resolves at all; `next/headers` is mocked per-test with an in-memory cookie store. The test file also pins `// @vitest-environment node` because `jose`'s `instanceof Uint8Array` checks fail across the jsdom/Node realm boundary that the project's default jsdom test environment introduces.
+
 ## Tech Stack
 
 - Next.js 15 with App Router
@@ -85,3 +89,4 @@ Prompts entered during AI-assisted development of this project, in order:
 7. "start the server"
 8. "center this content vertically. update readme.md file for this change."
 9. "replace the 'str_replace_editor' text with a more user friendly message of what this tool call is doing. for example, maybe state that a file is being created or edited, along with the name of the file being modified. Also, put this into a new component and write tests for it. Update readme.md file with all the prompt i've entered."
+10. "write tests for the @src/lib/auth.ts file. then update readme.md file"
