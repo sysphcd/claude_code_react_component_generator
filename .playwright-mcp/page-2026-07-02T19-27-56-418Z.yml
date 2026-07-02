@@ -1,0 +1,219 @@
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - img
+            - heading [level=1]: Component Generator
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: Build a pricing card component
+                            - generic:
+                              - generic:
+                                - img
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic:
+                                    - paragraph: This is a static response. You can place an Anthropic API key in the .env file to use the Anthropic API for component generation. Let me create an App.jsx file to display the component.
+                                  - generic:
+                                    - generic: str_replace_editor
+                                  - separator
+                                  - generic:
+                                    - paragraph: I'll create a Card component for you.
+                                  - generic:
+                                    - generic: str_replace_editor
+                                  - separator
+                                  - generic:
+                                    - paragraph: Now let me enhance the component with better styling.
+                                  - generic:
+                                    - generic: str_replace_editor
+                                  - separator
+                                  - generic:
+                                    - paragraph: "Perfect! I've created:"
+                                    - list:
+                                      - listitem:
+                                        - strong: Card.jsx
+                                        - text: "- A fully-featured card component"
+                                      - listitem:
+                                        - strong: App.jsx
+                                        - text: "- The main app file that displays the component"
+                                    - paragraph: The component is now ready to use. You can see the preview on the right side of the screen.
+              - generic:
+                - generic:
+                  - generic:
+                    - textbox:
+                      - /placeholder: Describe the React component you want to create...
+                    - button [disabled]:
+                      - img
+      - separator
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - tablist:
+                - tab: Preview
+                - tab [selected]: Code
+            - generic:
+              - button: Sign In
+              - button: Sign Up
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                              - img
+                              - generic: components
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                                  - generic: Card.jsx
+                          - generic:
+                            - generic:
+                              - img
+                              - generic: App.jsx
+              - separator
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - code:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: "1"
+                              - generic:
+                                - generic: "2"
+                              - generic:
+                                - generic: 
+                                - generic: "3"
+                              - generic:
+                                - generic: 
+                                - generic: "4"
+                              - generic:
+                                - generic: 
+                                - generic: "5"
+                              - generic:
+                                - generic: 
+                                - generic: "6"
+                              - generic:
+                                - generic: 
+                                - generic: "7"
+                              - generic:
+                                - generic: "8"
+                              - generic:
+                                - generic: "9"
+                              - generic:
+                                - generic: 
+                                - generic: "10"
+                              - generic:
+                                - generic: 
+                                - generic: "11"
+                              - generic:
+                                - generic: "12"
+                              - generic:
+                                - generic: "13"
+                              - generic:
+                                - generic: "14"
+                              - generic:
+                                - generic: "15"
+                              - generic:
+                                - generic: "16"
+                              - generic:
+                                - generic: "17"
+                              - generic:
+                                - generic: "18"
+                              - generic:
+                                - generic: "19"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: import Card from '@/components/Card';
+                              - generic:
+                                - generic: "export default function App() {"
+                              - generic:
+                                - generic: return (
+                              - generic:
+                                - generic: <div className="min-h-screen bg-gray-100 flex
+                              - generic:
+                                - generic: items-center justify-center p-8">
+                              - generic:
+                                - generic: <div className="w-full max-w-md">
+                              - generic:
+                                - generic: <Card
+                              - generic:
+                                - generic: title="Amazing Product"
+                              - generic:
+                                - generic: description="This is a fantastic product
+                              - generic:
+                                - generic: that will change your life. Experience the
+                              - generic:
+                                - generic: difference today!"
+                              - generic:
+                                - generic: "actions={"
+                              - generic:
+                                - generic: <button className="bg-blue-500 text-white
+                              - generic:
+                                - generic: px-4 py-2 rounded hover:bg-blue-600
+                              - generic:
+                                - generic: transition-colors">
+                              - generic:
+                                - generic: Learn More
+                              - generic:
+                                - generic: </button>
+                              - generic:
+                                - generic: "}"
+                              - generic:
+                                - generic: />
+                              - generic:
+                                - generic: </div>
+                              - generic:
+                                - generic: </div>
+                              - generic:
+                                - generic: );
+                              - generic:
+                                - generic: "}"
+                          - textbox
+  - alert
+  - dialog "Welcome back" [ref=f5e354]:
+    - generic [ref=f5e355]:
+      - heading "Welcome back" [level=2] [ref=f5e356]
+      - paragraph [ref=f5e357]: Sign in to your account to continue
+    - generic [ref=f5e359]:
+      - generic [ref=f5e360]:
+        - generic [ref=f5e361]: Email
+        - textbox "Email" [active] [ref=f5e362]:
+          - /placeholder: you@example.com
+      - generic [ref=f5e363]:
+        - generic [ref=f5e364]: Password
+        - textbox "Password" [ref=f5e365]
+      - button "Sign In" [ref=f5e366]
+    - generic [ref=f5e367]:
+      - text: Don't have an account?
+      - button "Sign up" [ref=f5e368]
+    - button "Close" [ref=f5e369]:
+      - img
+      - generic [ref=f5e370]: Close

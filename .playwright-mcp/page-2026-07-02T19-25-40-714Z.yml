@@ -1,0 +1,129 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e3]:
+    - generic [ref=f2e5]:
+      - generic [ref=f2e6]:
+        - img [ref=f2e8]
+        - heading "Component Generator" [level=1] [ref=f2e10]
+      - generic [ref=f2e12]:
+        - generic [ref=f2e18]:
+          - generic [ref=f2e54]:
+            - generic [ref=f2e57]: Build a pricing card component
+            - img [ref=f2e60]
+          - generic [ref=f2e63]:
+            - img [ref=f2e66]
+            - generic [ref=f2e71]:
+              - paragraph [ref=f2e73]: This is a static response. You can place an Anthropic API key in the .env file to use the Anthropic API for component generation. Let me create an App.jsx file to display the component.
+              - generic [ref=f2e76]: str_replace_editor
+              - separator [ref=f2e77]
+              - paragraph [ref=f2e79]: I'll create a Card component for you.
+              - generic [ref=f2e82]: str_replace_editor
+              - separator [ref=f2e83]
+              - paragraph [ref=f2e85]: Now let me enhance the component with better styling.
+              - generic [ref=f2e88]: str_replace_editor
+              - separator [ref=f2e89]
+              - generic [ref=f2e90]:
+                - paragraph [ref=f2e91]: "Perfect! I've created:"
+                - list [ref=f2e92]:
+                  - listitem [ref=f2e93]:
+                    - strong [ref=f2e94]: Card.jsx
+                    - text: "- A fully-featured card component"
+                  - listitem [ref=f2e100]:
+                    - strong [ref=f2e101]: App.jsx
+                    - text: "- The main app file that displays the component"
+                - paragraph [ref=f2e102]: The component is now ready to use. You can see the preview on the right side of the screen.
+        - generic [ref=f2e26]:
+          - textbox "Describe the React component you want to create..." [ref=f2e27]
+          - button [disabled] [ref=f2e28]:
+            - img [ref=f2e29]
+    - separator [ref=f2e32]
+    - generic [ref=f2e34]:
+      - generic [ref=f2e35]:
+        - tablist [ref=f2e37]:
+          - tab "Preview" [ref=f2e38]
+          - tab "Code" [active] [selected] [ref=f2e39]
+        - generic [ref=f2e40]:
+          - button "Sign In" [ref=f2e41]
+          - button "Sign Up" [ref=f2e42]
+      - generic [ref=f2e103]:
+        - generic [ref=f2e109]:
+          - generic [ref=f2e110]:
+            - generic [ref=f2e111] [cursor=pointer]:
+              - img [ref=f2e112]
+              - img [ref=f2e114]
+              - generic [ref=f2e116]: components
+            - generic [ref=f2e119] [cursor=pointer]:
+              - img [ref=f2e120]
+              - generic [ref=f2e125]: Card.jsx
+          - generic [ref=f2e127] [cursor=pointer]:
+            - img [ref=f2e128]
+            - generic [ref=f2e133]: App.jsx
+        - separator [ref=f2e134]
+        - code [ref=f2e139]:
+          - generic [ref=f2e140]:
+            - generic [ref=f2e142]:
+              - generic [ref=f2e145]: "1"
+              - generic [ref=f2e147]: "2"
+              - generic [ref=f2e148]:
+                - generic [ref=f2e149] [cursor=pointer]: 
+                - generic [ref=f2e150]: "3"
+              - generic [ref=f2e151]:
+                - generic [ref=f2e152] [cursor=pointer]: 
+                - generic [ref=f2e153]: "4"
+              - generic [ref=f2e154]:
+                - generic [ref=f2e155] [cursor=pointer]: 
+                - generic [ref=f2e156]: "5"
+              - generic [ref=f2e158]:
+                - generic [ref=f2e159] [cursor=pointer]: 
+                - generic [ref=f2e160]: "6"
+              - generic [ref=f2e161]:
+                - generic [ref=f2e162] [cursor=pointer]: 
+                - generic [ref=f2e163]: "7"
+              - generic [ref=f2e165]: "8"
+              - generic [ref=f2e167]: "9"
+              - generic [ref=f2e170]:
+                - generic [ref=f2e171] [cursor=pointer]: 
+                - generic [ref=f2e172]: "10"
+              - generic [ref=f2e173]:
+                - generic [ref=f2e174] [cursor=pointer]: 
+                - generic [ref=f2e175]: "11"
+              - generic [ref=f2e179]: "12"
+              - generic [ref=f2e181]: "13"
+              - generic [ref=f2e183]: "14"
+              - generic [ref=f2e185]: "15"
+              - generic [ref=f2e187]: "16"
+              - generic [ref=f2e189]: "17"
+              - generic [ref=f2e191]: "18"
+              - generic [ref=f2e193]: "19"
+            - generic [ref=f2e303]:
+              - generic [ref=f2e305]: import Card from '@/components/Card';
+              - generic [ref=f2e308]: "export default function App() {"
+              - generic [ref=f2e310]: return (
+              - generic [ref=f2e312]: <div className="min-h-screen bg-gray-100 flex
+              - generic [ref=f2e314]: items-center justify-center p-8">
+              - generic [ref=f2e316]: <div className="w-full max-w-md">
+              - generic [ref=f2e318]: <Card
+              - generic [ref=f2e320]: title="Amazing Product"
+              - generic [ref=f2e322]: description="This is a fantastic product
+              - generic [ref=f2e324]: that will change your life. Experience the
+              - generic [ref=f2e326]: difference today!"
+              - generic [ref=f2e328]: "actions={"
+              - generic [ref=f2e330]: <button className="bg-blue-500 text-white
+              - generic [ref=f2e332]: px-4 py-2 rounded hover:bg-blue-600
+              - generic [ref=f2e334]: transition-colors">
+              - generic [ref=f2e336]: Learn More
+              - generic [ref=f2e338]: </button>
+              - generic [ref=f2e340]: "}"
+              - generic [ref=f2e342]: />
+              - generic [ref=f2e344]: </div>
+              - generic [ref=f2e346]: </div>
+              - generic [ref=f2e348]: );
+              - generic [ref=f2e350]: "}"
+            - textbox "Editor content" [ref=f2e352]
+            - generic:
+              - generic:
+                - generic:
+                  - list
+  - alert [ref=f2e53]
+  - generic [ref=f2e353]:
+    - alert
+    - alert
