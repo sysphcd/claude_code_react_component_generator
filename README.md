@@ -71,3 +71,17 @@ The chat empty state (`ChatInterface.tsx`) is rendered outside the `ScrollArea` 
 - Prisma with SQLite
 - Anthropic Claude AI
 - Vercel AI SDK
+
+## Prompt History
+
+Prompts entered during AI-assisted development of this project, in order:
+
+1. "open the app up in the browser and iterate on the styling a few times. Go for a sleek modern design."
+2. "hold off on gradients on buttons in general and keep changes more subtle"
+3. "update readme.md file to inculde what i've done so far"
+4. "can you memorize to use comments sparingly. Only comment complex code."
+5. "how does the auth system work? @src/components/auth/AuthDialog.tsx @src/hooks/use-auth.ts @src/lib/auth.ts"
+6. "what attributes does a user have?"
+7. "start the server"
+8. "center this content vertically. update readme.md file for this change."
+9. "replace the 'str_replace_editor' text with a more user friendly message of what this tool call is doing. for example, maybe state that a file is being created or edited, along with the name of the file being modified. Also, put this into a new component and write tests for it. Update readme.md file with all the prompt i've entered."
