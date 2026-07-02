@@ -60,6 +60,8 @@ Open [http://localhost:3000](http://localhost:3000)
 
 The UI uses a violet/indigo accent theme defined via CSS custom properties in `src/app/globals.css`, applied consistently across the chat panel, code editor, file tree, preview empty states, and auth dialog. Buttons use solid accent colors (no gradients) to keep the interface understated.
 
+The chat empty state (`ChatInterface.tsx`) is rendered outside the `ScrollArea` and vertically centered in the panel, since Radix's `ScrollArea` viewport sizes to content and can't center a child against the panel's full height.
+
 ## Tech Stack
 
 - Next.js 15 with App Router
