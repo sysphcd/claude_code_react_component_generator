@@ -66,6 +66,13 @@ The chat empty state (`ChatInterface.tsx`) is rendered outside the `ScrollArea` 
 
 `src/lib/auth.ts` is tested in `src/lib/__tests__/auth.test.ts`, covering session creation, retrieval, deletion, and verification (including tampered, wrong-secret, and expired tokens). Since it imports `server-only` (a package with no real file on disk, meant only for Next.js's build-time bundler check) and `next/headers`'s `cookies()` (which requires an active request scope), the test mocks both. `server-only` is aliased to a no-op stub via `resolve.alias` in `vitest.config.mts` so the import resolves at all; `next/headers` is mocked per-test with an in-memory cookie store. The test file also pins `// @vitest-environment node` because `jose`'s `instanceof Uint8Array` checks fail across the jsdom/Node realm boundary that the project's default jsdom test environment introduces.
 
+## Custom Commands
+
+Custom Claude Code slash commands defined in `.claude/commands/`:
+
+- **`/audit`** — Runs `npm audit` to find vulnerable dependencies, applies fixes with `npm audit fix`, then runs the test suite to verify nothing broke.
+- **`/write_tests <target>`** — Writes comprehensive Vitest + React Testing Library tests for the given file, covering happy paths, edge cases, and error states. Test files are placed in a `__tests__` directory alongside the source file, named `[filename].test.ts(x)`, and use `@/`-aliased imports.
+
 ## Tech Stack
 
 - Next.js 15 with App Router
@@ -90,3 +97,4 @@ Prompts entered during AI-assisted development of this project, in order:
 8. "center this content vertically. update readme.md file for this change."
 9. "replace the 'str_replace_editor' text with a more user friendly message of what this tool call is doing. for example, maybe state that a file is being created or edited, along with the name of the file being modified. Also, put this into a new component and write tests for it. Update readme.md file with all the prompt i've entered."
 10. "write tests for the @src/lib/auth.ts file. then update readme.md file"
+11. "update readme.md file to add the info of the custom commands audit.md and write_tests.md i've implemented"
