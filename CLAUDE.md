@@ -75,3 +75,7 @@ Design tokens (colors, radius) live in `src/app/globals.css` as CSS custom prope
 ### Development Best Practices
 
 - Use comments sparingly. Only comment complex code.
+
+### Database
+
+- The database schema is defined in the @prisma/schema.prisma file. Reference it anytime you need to understand the structure of data stored in the database.
