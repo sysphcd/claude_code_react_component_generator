@@ -73,6 +73,20 @@ Custom Claude Code slash commands defined in `.claude/commands/`:
 - **`/audit`** — Runs `npm audit` to find vulnerable dependencies, applies fixes with `npm audit fix`, then runs the test suite to verify nothing broke.
 - **`/write_tests <target>`** — Writes comprehensive Vitest + React Testing Library tests for the given file, covering happy paths, edge cases, and error states. Test files are placed in a `__tests__` directory alongside the source file, named `[filename].test.ts(x)`, and use `@/`-aliased imports.
 
+## Claude Code GitHub Integration
+
+This repo has [Claude Code](https://claude.com/claude-code) wired into GitHub Actions via two workflows added in `.github/workflows/`:
+
+- **`claude.yml`** — Lets you mention `@claude` in a pull request or issue comment to have Claude read the surrounding context (files, diffs, prior comments) and act on the request directly — fixing bugs, writing tests, updating docs, or implementing changes as a new commit/branch.
+- **`claude-code-review.yml`** — Runs Claude automatically to review incoming pull requests and leave feedback as comments.
+
+Notes:
+
+- Only users with write access to the repo can trigger the workflow.
+- The Anthropic API key used by the workflow is stored as a GitHub Actions secret, not committed to the repo.
+- Claude's allowed tools are scoped by the workflow file (reading/writing files, commenting, branching, committing); additional tools (e.g. running `npm test`) can be granted by extending the `allowed_tools` list in `claude.yml`.
+- All runs are logged in the GitHub Actions run history for auditing.
+
 ## Tech Stack
 
 - Next.js 15 with App Router
@@ -99,3 +113,4 @@ Prompts entered during AI-assisted development of this project, in order:
 10. "write tests for the @src/lib/auth.ts file. then update readme.md file"
 11. "update readme.md file to add the info of the custom commands audit.md and write_tests.md i've implemented"
 12. "Your goal is to improve the component generation prompt at @src/lib/prompts/generation.tsx. Here's how: 1. Open a browser and navigate to localhost:3000 2. Request a basic component to be generated 3. Review the generated component and its source code 4. Identifiy areas for improvement 5. Update the prompt to produce better components going forward. For now, only evaluate visual styling aspects. We don't want components generated that look like typical tailwindcss components - We want something more original."
+13. "/install-github-app" — then: "paste this in readme.md file and add some description for adding claude code in Github intergration"
